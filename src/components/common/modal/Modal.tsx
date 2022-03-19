@@ -9,6 +9,7 @@ const Modal: React.FC<ModalPropsType> = ({isShowing, hide, children}) => {
         return ReactDOM.createPortal(
             <Fragment>
                 <S.BodyBlackoutStyle onClick={hide}/>
+                {children}
             </Fragment>,
             document.body
         )

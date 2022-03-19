@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './AddImgForm.style';
 
-const addImgForm: React.FC = () => {
+const AddImgForm: React.FC = () => {
     return (
         <S.Container>
             <S.ContentTitle>티켓 추가하기</S.ContentTitle>
@@ -15,4 +15,4 @@ const addImgForm: React.FC = () => {
     )
 }
 
-export default addImgForm;
+export default AddImgForm;
