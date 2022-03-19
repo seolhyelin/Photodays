@@ -8,7 +8,7 @@ const AddImgForm: React.FC = () => {
             <S.ContentInfo>티켓에 사진을 추가할 방법을 선택하세요</S.ContentInfo>
             <S.UpdateSortList>
                 <S.UpdateSort>
-                <S.FetchLocalPC>앨범에서 불러오기</S.FetchLocalPC>
+                <S.FetchLocalPC>내 PC에서 불러오기</S.FetchLocalPC>
                 </S.UpdateSort>
             </S.UpdateSortList>
         </S.Container>
