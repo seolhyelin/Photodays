@@ -12,7 +12,7 @@ ReactDOM.render(
     <GlobalStyle />
     <App />
     <Calendar />
-    <Sidebar />
+    {/* <Sidebar /> */}
   </ThemeProvider>,
   document.getElementById('root'),
 );
