@@ -14,6 +14,7 @@ const App: React.FC = () => {
     <Modal isShowing={isShowing} hide={setModalVisible}>
       <ModalTemplate>
       <SetContentInfoForm />
+      {/* <AddImgForm /> */}
     </ModalTemplate>
     </Modal>
     </>
