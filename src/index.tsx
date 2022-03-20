@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './components/main/Main';
-import Sidebar from './components/Sidebar/Sidebar'
+import Sidebar from './components/Sidebar/Sidebar';
 import { ThemeProvider } from 'styled-components';
 import App from './App';
 import GlobalStyle from './styles/global-style';
@@ -12,7 +12,7 @@ ReactDOM.render(
     <GlobalStyle />
     <App />
     <Main />
-    <Sidebar />
+    {/* <Sidebar /> */}
   </ThemeProvider>,
   document.getElementById('root'),
 );
