@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './components/main/Main';
+import Calendar from './components/Calendar/Calendar';
 import Sidebar from './components/Sidebar/Sidebar';
 import { ThemeProvider } from 'styled-components';
 import App from './App';
@@ -11,7 +11,7 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     <App />
-    <Main />
+    <Calendar />
     {/* <Sidebar /> */}
   </ThemeProvider>,
   document.getElementById('root'),
