@@ -7,7 +7,12 @@ const MainCal = () => {
 
   const today: moment.Moment = getMoment;
   const firstWeek: number = today.clone().startOf('month').week();
-  const lastWeek = today.clone().endOf('month').week() === 1 ? 53 : today.clone().endOf('month').week;
+  let lastWeek = 0;
+  if (today.clone().endOf('month').week() === 1) {
+    lastWeek = 53;
+  } else {
+    lastWeek = today.clone().endOf('month').week();
+  }
 
   const prevMonth = (): void => {
     setMoment(getMoment.clone().subtract(1, 'month'));
@@ -17,10 +22,13 @@ const MainCal = () => {
     setMoment(getMoment.clone().add(1, 'month'));
   };
 
+  const popUp = () => {
+    alert('clicked');
+  };
+
   const calendarArr = (): any[] => {
     let result: any[] = [];
     let week: number = firstWeek;
-
     for (week; week <= lastWeek; week++) {
       result = result.concat(
         <TR key={week}>
@@ -31,19 +39,19 @@ const MainCal = () => {
 
               if (moment().format('YYYYMMDD') === days.format('YYYYMMDD')) {
                 return (
-                  <TD key={idx} style={{ backgroundColor: 'red' }}>
+                  <TD key={idx} style={{ backgroundColor: 'red' }} onClick={popUp}>
                     <Days>{days.format('D')}</Days>
                   </TD>
                 );
               } else if (days.format('MM') !== today.format('MM')) {
                 return (
-                  <TD key={idx} style={{ backgroundColor: 'gray' }}>
+                  <TD key={idx} style={{ backgroundColor: 'gray' }} onClick={popUp}>
                     <Days>{days.format('D')}</Days>
                   </TD>
                 );
               } else {
                 return (
-                  <TD key={idx}>
+                  <TD key={idx} onClick={popUp}>
                     <Days>{days.format('D')}</Days>
                   </TD>
                 );
