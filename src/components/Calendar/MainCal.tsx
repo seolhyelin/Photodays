@@ -6,7 +6,12 @@ const MainCal = () => {
   const [getMoment, setMoment] = useState(moment());
   const today: moment.Moment = getMoment;
 
-  return <Container>MainCal</Container>;
+  return (
+    <Container>
+      <Button>이전달</Button>
+      <Button>다음달</Button>
+    </Container>
+  );
 };
 
 export default MainCal;
