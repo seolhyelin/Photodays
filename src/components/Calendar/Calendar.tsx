@@ -44,7 +44,7 @@ const events: Event[] = [
   },
 ];
 
-const Main: React.FC = () => {
+const CalendarLib: React.FC = () => {
   const [newEvent, setNewEvent] = useState<Event>({ title: '', start: '', end: '' });
   const [allEvents, setAllEvents] = useState<Event[]>(events);
 
@@ -66,7 +66,7 @@ const Main: React.FC = () => {
   );
 };
 
-export default Main;
+export default CalendarLib;
 
 const Container = styled.div`
   width: 100%;
