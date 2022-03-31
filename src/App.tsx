@@ -10,13 +10,13 @@ const App: React.FC = () => {
 
   return (
     <>
-    <button onClick={setModalVisible}>show modal</button>
-    <Modal isShowing={isShowing} hide={setModalVisible}>
-      <ModalTemplate>
-      <SetContentInfoForm />
-      {/* <AddImgForm /> */}
-    </ModalTemplate>
-    </Modal>
+      <button onClick={setModalVisible}>show modal</button>
+      <Modal isShowing={isShowing} hide={setModalVisible}>
+        <ModalTemplate>
+          {/* <SetContentInfoForm /> */}
+          <AddImgForm />
+        </ModalTemplate>
+      </Modal>
     </>
   );
 };
