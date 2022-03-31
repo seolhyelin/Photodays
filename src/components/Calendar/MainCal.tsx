@@ -80,8 +80,8 @@ const MainCal = () => {
 export default MainCal;
 
 const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   font-size: 1.5vh;
   display: flex;
   flex-direction: column;
@@ -100,8 +100,6 @@ const Button = styled.button``;
 
 const Table = styled.table`
   display: flex;
-  width: 50vw;
-  height: 50vh;
 `;
 
 const TBody = styled.tbody`
@@ -117,8 +115,8 @@ const TR = styled.tr`
 const TD = styled.td`
   display: flex;
   border: 1px solid gray;
-  width: 5vw;
-  height: 5vh;
+  width: 100px;
+  height: 70px;
 `;
 
 const Days = styled.span`
