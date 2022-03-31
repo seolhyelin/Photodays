@@ -13,8 +13,8 @@ const App: React.FC = () => {
       <button onClick={setModalVisible}>show modal</button>
       <Modal isShowing={isShowing} hide={setModalVisible}>
         <ModalTemplate>
-          <SetContentInfoForm />
-          {/* <AddImgForm /> */}
+          {/* <SetContentInfoForm /> */}
+          <AddImgForm />
         </ModalTemplate>
       </Modal>
     </>
