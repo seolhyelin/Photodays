@@ -8,11 +8,9 @@ const MainCal = () => {
   const today: moment.Moment = getMoment;
   const firstWeek: number = today.clone().startOf('month').week();
   let lastWeek = 0;
-  if (today.clone().endOf('month').week() === 1) {
-    lastWeek = 53;
-  } else {
-    lastWeek = today.clone().endOf('month').week();
-  }
+  today.clone().endOf('month').week() === 1 ? (lastWeek = 53) : (lastWeek = today.clone().endOf('month').week());
+
+  const returnToday = () => setMoment(moment());
 
   const prevMonth = (): void => {
     setMoment(getMoment.clone().subtract(1, 'month'));
@@ -39,13 +37,13 @@ const MainCal = () => {
 
               if (moment().format('YYYYMMDD') === days.format('YYYYMMDD')) {
                 return (
-                  <TD key={idx} style={{ backgroundColor: 'red' }} onClick={popUp}>
+                  <TD key={idx} style={{ backgroundColor: '#114A38' }} onClick={popUp}>
                     <Days>{days.format('D')}</Days>
                   </TD>
                 );
               } else if (days.format('MM') !== today.format('MM')) {
                 return (
-                  <TD key={idx} style={{ backgroundColor: 'gray' }} onClick={popUp}>
+                  <TD key={idx} style={{ backgroundColor: '#9AB0A7' }} onClick={popUp}>
                     <Days>{days.format('D')}</Days>
                   </TD>
                 );
@@ -65,9 +63,10 @@ const MainCal = () => {
 
   return (
     <Container>
+      <Title>Photodays</Title>
       <MonthController>
         <Button onClick={prevMonth}>이전달</Button>
-        <ThisMonth>{today.format('YYYY년 MM월')}</ThisMonth>
+        <ThisMonth onClick={returnToday}>{today.format('YYYY년 MM월')}</ThisMonth>
         <Button onClick={nextMonth}>다음달</Button>
       </MonthController>
       <Table>
@@ -89,14 +88,33 @@ const Container = styled.div`
   justify-content: center;
 `;
 
+const Title = styled.div`
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-family: 'Palette Mosaic', cursive;
+  color: ${({ theme }) => theme.color.main};
+`;
+
 const MonthController = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 30px;
 `;
 
-const ThisMonth = styled.span``;
+const ThisMonth = styled.span`
+  margin: 0 20px;
+  font-size: 20px;
+  cursor: pointer;
+`;
 
-const Button = styled.button``;
+const Button = styled.button`
+  width: 60px;
+  height: 40px;
+  color: white;
+  background-color: ${({ theme }) => theme.color.main};
+  border: none;
+  cursor: pointer;
+`;
 
 const Table = styled.table`
   display: flex;
@@ -114,9 +132,10 @@ const TR = styled.tr`
 
 const TD = styled.td`
   display: flex;
-  border: 1px solid gray;
-  width: 100px;
-  height: 70px;
+  border: 1px solid ${({ theme }) => theme.color.main};
+  width: 120px;
+  height: 100px;
+  font-size: 1.5rem;
 `;
 
 const Days = styled.span`

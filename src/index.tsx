@@ -6,7 +6,6 @@ import { ThemeProvider } from 'styled-components';
 import App from './App';
 import GlobalStyle from './styles/global-style';
 import { theme } from './styles/theme';
-import Cal from './components/Calendar/Cal';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
