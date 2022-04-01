@@ -11,8 +11,8 @@ ReactDOM.render(
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     <App />
+    <Sidebar />
     <MainCal />
-    {/* <Sidebar /> */}
   </ThemeProvider>,
   document.getElementById('root'),
 );

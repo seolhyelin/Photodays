@@ -18,7 +18,7 @@ const Item: React.FC = ({}) => {
 export default Item;
 
 const Container = styled.div`
-  width: 400px;
+  width: 350px;
   height: 80px;
   border: solid 2px green;
   border-radius: 3px;
