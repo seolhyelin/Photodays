@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Calendar from './components/Calendar/Calendar';
+import MainCal from './components/Calendar/MainCal';
 import Sidebar from './components/Sidebar/Sidebar';
 import { ThemeProvider } from 'styled-components';
 import App from './App';
@@ -12,7 +12,7 @@ ReactDOM.render(
     <GlobalStyle />
     <App />
     <Sidebar />
-    <Calendar />
+    <MainCal />
   </ThemeProvider>,
   document.getElementById('root'),
 );
