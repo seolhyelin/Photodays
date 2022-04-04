@@ -15,7 +15,9 @@ ReactDOM.render(
       <MainCal />
     </RecoilRoot>
     <GlobalStyle />
-    {/* <Sidebar /> */}
+    <App />
+    <Sidebar />
+    <MainCal />
   </ThemeProvider>,
   document.getElementById('root'),
 );
