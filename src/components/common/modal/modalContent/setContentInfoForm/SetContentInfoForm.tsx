@@ -1,12 +1,19 @@
 import React from 'react';
+
+import { useRecoilState } from 'recoil';
+import { tmpInfoState } from '../../../../../recoil/photoInfo';
+import type { InfoType } from '../../../../../recoil/photoInfo';
+
 import * as S from './SetContentInfoForm.style';
 import Button from '../../../button/Button';
 
 const SetContentInfoForm: React.FC = () => {
+  const [tmpInfo, setTmpInfo] = useRecoilState<InfoType>(tmpInfoState);
+
   return (
     <S.Container>
       <S.Date>2022.03.06</S.Date>
-      <S.Thumbnail />
+      <S.Thumbnail src={tmpInfo.img_url as string}/>
       <S.SetContentInputList>
         <S.SetContentInputSort>
           <S.SetContentInput placeholder="제목" />
