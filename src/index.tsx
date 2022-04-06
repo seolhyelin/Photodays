@@ -14,6 +14,7 @@ ReactDOM.render(
     <RecoilRoot>
       <App />
       <MainCal />
+      <Sidebar />
     </RecoilRoot>
   </ThemeProvider>,
   document.getElementById('root'),
